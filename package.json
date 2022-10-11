@@ -1,5 +1,5 @@
 {
-  "name": "myproject",
+  "name": "server",
   "version": "1.0.0",
   "description": "simple app",
   "main": "index.js",

@@ -128,9 +128,9 @@ app.post('/',async(req,res)=>{
         //res.redirect(shortUrl.full)
       })
 
-      // if(process.env.NODE_ENV=="production"){
-      //   app.use(express.static("client/build"));
-      // }
+      if(process.env.NODE_ENV=="production"){
+        app.use(express.static("client/build"));
+      }
 const port=process.env.PORT||5000;
 
 app.listen(port,()=>console.log("server is running...."));
