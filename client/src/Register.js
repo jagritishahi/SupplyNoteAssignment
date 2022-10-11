@@ -39,20 +39,18 @@ const Register=()=>{
     const data = await resp.json();
 
     console.log(data);
-    if (data.status === 422 || !data) {
+    if (resp.status === 422 || !data) {
       window.alert("Invalid Registration");
       console.log("Invalid Registration");
-    } else if(data.status===201) {
+    } else if(resp.status===201) {
       window.alert("Registration Successful");
       console.log("registeration successful");
 
       navigate('/login');
-    }else if(data.status===409){
+    }else if(resp.status===409){
       window.alert("Email already exist");
-    }else if(data.status===401){
+    }else if(resp.status===401){
       window.alert("Password & confirm password doesn't match");
-    }else{
-      window.alert("All fields are mandatory");
     }
   };
     
